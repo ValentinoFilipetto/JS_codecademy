@@ -1,0 +1,5 @@
+const kelvin = 0; // forecast today in Kelvin.
+let celsius = kelvin - 273; // converting kelvin to celsius.
+var fahrenheit = celsius*(9/5)+32; // converting celsius to Fahrenheit.
+fahrenheit = Math.floor(fahrenheit); // rounding down the Fahrenheit temperature. 
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`);
