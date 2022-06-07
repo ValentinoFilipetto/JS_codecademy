@@ -1,0 +1,34 @@
+const team = {
+  _players: [
+    {firstName: 'Al',lastName: 'Corleone', age: 22},
+    {firstName: 'John',lastName: 'Corleone', age: 28},
+    {firstName: 'Jack',lastName: 'Corleone', age: 34}],
+  _games: [
+    {opponent: 'Johnny',teamPoints: 'Forchielli', opponentPoints: 26},
+    {opponent: 'Willy',teamPoints: 'Forchielli', opponentPoints: 27},
+    {opponent: 'Bobby',teamPoints: 'Forchielli', opponentPoints: 29},
+  ],
+  get players() {
+    return menu._players
+  },
+  get games() {
+    return menu._games
+  },
+  addPlayer (newFirstName,newLastName,newAge) {
+   const player = {firstName: newFirstName,lastName: newLastName, age: newAge}
+   this._players.push(player)
+  },
+  addGame (newOpponent,newTeamPoints,newOpponentPoints) {
+   const game = {opponent: newOpponent,teamPoints: newTeamPoints, opponentPoints: newOpponentPoints}
+   this._games.push(game)
+  
+}
+}
+
+team.addPlayer('New','',49)
+console.log(team._players)
+
+team.addGame('Titans',100,98)
+console.log(team._games)
+
+
