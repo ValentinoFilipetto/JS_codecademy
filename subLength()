@@ -1,0 +1,42 @@
+const firstOcc = (str, char) => {
+  for (let i=0; i <= str.length; i++) {
+    if (str[i] == char) {
+      return i-1;
+      break;
+    }
+  }
+} 
+
+const howMany = (str, char) => {
+  let counter = 0;
+  for (let i=0; i <= str.length; i++) {
+    if (str[i] == char) {
+      counter++;
+    }
+  }
+  return counter;
+} 
+
+const subLength = (str, char) => {
+  if (howMany(str, char) > 2 || howMany(str, char) < 2) {
+    return 0;
+  }
+  else {
+  let counter = 0
+  for (let i=0; i <= str.length; i++) {
+    if (str[i] == char) {
+      counter++;
+      if (counter == 2) {
+      return i - (firstOcc(str, char));
+      }
+     }
+    }
+   }
+  } 
+  
+
+/*
+The function subLength() takes 2 parameters, a string and a single character. 
+It searches the string for the two occurrences of the character and returns the length between them including the 2 characters. 
+If there are less than 2 or more than 2 occurrences of the character the function returns 0.
+*/
